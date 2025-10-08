@@ -81,43 +81,94 @@ body{
 .specs{
     width: 100%;
     height: 100vh;
-    /* background: palevioletred; */
+    background: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* border-radius: 20px; */
+}
+.specs .intro{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: #ffff;
+}
+.specs .intro h1{
+    font-size: 60px;
 }
 .slider-container{
-    width: 90%;
+    width: 100%;
     max-width: 60vw;
     height: 70vh;
-    background-color: rgb(243, 141, 7);
+    /* background-color: rgb(243, 141, 7); */
     display: flex;
     /* flex-direction: row; */
     /* justify-content: center; */
     /* align-items: center; */
     position: relative;
-    overflow: hidden;
-
+    /* overflow: hidden; */
+    transition: 0.5s;
 }
 .slider{
     min-width: 100%;
     height: 100%;
     /* background: palegreen; */
+    border-radius: 100px;
 }
 
 #slider1{
-    background: red;
+    background: url(./Assets/iPhone-Air-PNG.png) no-repeat center center/cover;
 }
 #slider2{
-    background: rgb(115, 255, 0);
+    background: url(./Assets/Apple-iPhone-17-Pro-PNG-1.png) no-repeat center center/cover;
 }
 #slider3{
-    background: rgb(0, 42, 255);
+    background: url(./Assets/iphone-17-green.jpg) no-repeat center center/cover;
 }
 
 .navigations{
-    background: silver;
-    width: 10%;
+    /* background: silver; */
+    width: 100%;
     height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    gap: 50%;
 }
+.navigations button{
+    width: 80px;
+    height: 90%;
+    border: 1px solid rgb(255, 255, 255);
+    background: none;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: 0.5s;
+    color: #ffff;
+    font-weight: bold;
+
+    
+
+}
+.navigations button:hover{
+    background-color: rgb(255, 115, 0);
+    color: #ffff;
+}
+
+.carousel {
+    width: 80%;
+    max-width: 60vw;
+    height: 70vh;
+    /* border: 2px solid green; */
+    display: flex;
+    
+    /* position: relative; */
+    overflow: hidden;
+}
+
+
+
