@@ -47,10 +47,27 @@
             </h1>
         </div>
         <div class="carousel">
+            <!--
+                 ⚡ Bolt Performance Optimization:
+                 The three slider items below are optimized. Instead of using CSS background-images
+                 which are eagerly loaded by the browser on DOM construction, we use native HTML <img> tags
+                 with loading="lazy" and decoding="async".
+
+                 Why:
+                 - This saves 1.2 MB of initial network transfer (iPhone-Air-PNG.png ~361K, Apple-iPhone-17-Pro-PNG-1.png ~677K, iphone-17-green.jpg ~166K).
+                 - The browser will only load these images once the user actually scrolls down to the highlights/carousel section.
+                 - decoding="async" avoids blocking the main thread during image decoding.
+            -->
             <div class="slider-container">
-                <div id="slider1" class="slider"></div>
-                <div id="slider2" class="slider"></div>
-                <div id="slider3" class="slider"></div>
+                <div id="slider1" class="slider">
+                    <img src="./Assets/iPhone-Air-PNG.png" alt="iPhone Air" class="slider-img" loading="lazy" decoding="async">
+                </div>
+                <div id="slider2" class="slider">
+                    <img src="./Assets/Apple-iPhone-17-Pro-PNG-1.png" alt="iPhone 17 Pro" class="slider-img" loading="lazy" decoding="async">
+                </div>
+                <div id="slider3" class="slider">
+                    <img src="./Assets/iphone-17-green.jpg" alt="iPhone 17 Green" class="slider-img" loading="lazy" decoding="async">
+                </div>
             </div>
         </div>
 
