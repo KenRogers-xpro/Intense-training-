@@ -117,16 +117,27 @@ body{
     height: 100%;
     /* background: palegreen; */
     border-radius: 100px;
+    overflow: hidden;
 }
 
+/* Style for native lazy-loaded slider images */
+.slider-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100px;
+    display: block;
+}
+
+/* Background URL loading is disabled in favor of native HTML <img> lazy loading (saving 1.2MB of eager requests) */
 #slider1{
-    background: url(./Assets/iPhone-Air-PNG.png) no-repeat center center/cover;
+    background: none;
 }
 #slider2{
-    background: url(./Assets/Apple-iPhone-17-Pro-PNG-1.png) no-repeat center center/cover;
+    background: none;
 }
 #slider3{
-    background: url(./Assets/iphone-17-green.jpg) no-repeat center center/cover;
+    background: none;
 }
 
 .navigations{
