@@ -48,9 +48,18 @@
         </div>
         <div class="carousel">
             <div class="slider-container">
-                <div id="slider1" class="slider"></div>
-                <div id="slider2" class="slider"></div>
-                <div id="slider3" class="slider"></div>
+                <!-- Optimized: Using inline HTML <img> tags with lazy loading and async decoding
+                     instead of CSS background images. This prevents eager loading of off-screen/inactive slides,
+                     improving initial page load times and reducing payload size on DOM construction. -->
+                <div id="slider1" class="slider">
+                    <img src="./Assets/iPhone-Air-PNG.png" alt="iPhone Air" loading="lazy" decoding="async">
+                </div>
+                <div id="slider2" class="slider">
+                    <img src="./Assets/Apple-iPhone-17-Pro-PNG-1.png" alt="iPhone 17 Pro" loading="lazy" decoding="async">
+                </div>
+                <div id="slider3" class="slider">
+                    <img src="./Assets/iphone-17-green.jpg" alt="iPhone 17 Green" loading="lazy" decoding="async">
+                </div>
             </div>
         </div>
 
