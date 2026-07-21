@@ -1,0 +1,3 @@
+## 2026-07-21 - [LCP Optimization via CSS-to-HTML Image Refactoring]
+**Learning:** CSS `background-image` properties prevent browser preload scanners from identifying images early and do not support modern performance attributes like `loading="lazy"`, `decoding="async"`, and `fetchpriority`. Converting them to native HTML `<img>` elements allows modern attributes to defer non-critical image requests below the fold while prioritizing LCP assets above the fold.
+**Action:** When auditing static pages, convert below-the-fold or offscreen CSS background images to HTML `<img>` elements, apply `loading="lazy"` and `decoding="async"` to them, and prioritize above-the-fold LCP assets with `fetchpriority="high"`.
