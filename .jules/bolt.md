@@ -1,0 +1,3 @@
+## 2025-03-05 - Converting Slider CSS Background Images to HTML Images
+**Learning:** In static web applications without modern build/bundling setups, images loaded via CSS `background-image` do not benefit from standard HTML features like `loading="lazy"`, `decoding="async"`, and `fetchpriority="high"`. This results in either redundant eager loading of all slide images or lack of prioritization.
+**Action:** Transition carousel and slider CSS background-images to HTML `<img>` elements. Eager load the first (above-the-fold) slide image with `fetchpriority="high"` to optimize the Largest Contentful Paint (LCP) and apply `loading="lazy"` with `decoding="async"` to subsequent slider images to defer non-critical image loading.
