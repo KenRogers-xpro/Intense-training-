@@ -48,9 +48,18 @@
         </div>
         <div class="carousel">
             <div class="slider-container">
-                <div id="slider1" class="slider"></div>
-                <div id="slider2" class="slider"></div>
-                <div id="slider3" class="slider"></div>
+                <div id="slider1" class="slider">
+                    <!-- First slide (LCP element): eager loading, high fetchpriority, async decoding to prevent render-blocking -->
+                    <img src="./Assets/iPhone-Air-PNG.png" alt="iPhone 17 Air" class="slider-img" fetchpriority="high" decoding="async">
+                </div>
+                <div id="slider2" class="slider">
+                    <!-- Offscreen slide: lazy load, async decoding to save bandwidth and offload the main thread -->
+                    <img src="./Assets/Apple-iPhone-17-Pro-PNG-1.png" alt="Apple iPhone 17 Pro" class="slider-img" loading="lazy" decoding="async">
+                </div>
+                <div id="slider3" class="slider">
+                    <!-- Offscreen slide: lazy load, async decoding to save bandwidth and offload the main thread -->
+                    <img src="./Assets/iphone-17-green.jpg" alt="iPhone 17 green" class="slider-img" loading="lazy" decoding="async">
+                </div>
             </div>
         </div>
 
