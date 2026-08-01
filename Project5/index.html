@@ -48,9 +48,18 @@
         </div>
         <div class="carousel">
             <div class="slider-container">
-                <div id="slider1" class="slider"></div>
-                <div id="slider2" class="slider"></div>
-                <div id="slider3" class="slider"></div>
+                <div id="slider1" class="slider">
+                    <!-- Optimized: loaded eagerly, high priority since it is above-the-fold/initially active -->
+                    <img src="./Assets/iPhone-Air-PNG.png" alt="iPhone Air" fetchpriority="high" decoding="async">
+                </div>
+                <div id="slider2" class="slider">
+                    <!-- Optimized: lazy loaded & decoded asynchronously since it is below-the-fold/initially hidden -->
+                    <img src="./Assets/Apple-iPhone-17-Pro-PNG-1.png" alt="Apple iPhone 17 Pro" loading="lazy" decoding="async">
+                </div>
+                <div id="slider3" class="slider">
+                    <!-- Optimized: lazy loaded & decoded asynchronously since it is below-the-fold/initially hidden -->
+                    <img src="./Assets/iphone-17-green.jpg" alt="iPhone 17 Green" loading="lazy" decoding="async">
+                </div>
             </div>
         </div>
 
