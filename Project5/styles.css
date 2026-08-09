@@ -117,16 +117,23 @@ body{
     height: 100%;
     /* background: palegreen; */
     border-radius: 100px;
+    overflow: hidden; /* Ensure child img respects border-radius */
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 #slider1{
-    background: url(./Assets/iPhone-Air-PNG.png) no-repeat center center/cover;
+    /* Refactored background-image to semantic HTML image */
 }
 #slider2{
-    background: url(./Assets/Apple-iPhone-17-Pro-PNG-1.png) no-repeat center center/cover;
+    /* Refactored background-image to semantic HTML image */
 }
 #slider3{
-    background: url(./Assets/iphone-17-green.jpg) no-repeat center center/cover;
+    /* Refactored background-image to semantic HTML image */
 }
 
 .navigations{
