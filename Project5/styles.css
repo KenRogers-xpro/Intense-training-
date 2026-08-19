@@ -117,16 +117,16 @@ body{
     height: 100%;
     /* background: palegreen; */
     border-radius: 100px;
+    overflow: hidden;
 }
 
-#slider1{
-    background: url(./Assets/iPhone-Air-PNG.png) no-repeat center center/cover;
-}
-#slider2{
-    background: url(./Assets/Apple-iPhone-17-Pro-PNG-1.png) no-repeat center center/cover;
-}
-#slider3{
-    background: url(./Assets/iphone-17-green.jpg) no-repeat center center/cover;
+/* Performance Optimization: Native img tags allow native browser image lazy loading and decode async features */
+.slider img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 100px;
 }
 
 .navigations{
