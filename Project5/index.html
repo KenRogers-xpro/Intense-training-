@@ -36,7 +36,8 @@
     </header>
     <section class="main">
         <div class="hero-image">
-            <img src="./Assets/hero__bdntboqignj6_xlarge.jpg" alt="Iphone 17 pro max">
+            <!-- Priority load LCP image with fetchpriority="high" and async decoding -->
+            <img src="./Assets/hero__bdntboqignj6_xlarge.jpg" alt="Iphone 17 pro max" fetchpriority="high" decoding="async">
         </div>
 
     </section>
@@ -48,9 +49,16 @@
         </div>
         <div class="carousel">
             <div class="slider-container">
-                <div id="slider1" class="slider"></div>
-                <div id="slider2" class="slider"></div>
-                <div id="slider3" class="slider"></div>
+                <!-- Converted CSS background images to HTML <img> tags; off-screen carousel items are lazy loaded -->
+                <div id="slider1" class="slider">
+                    <img src="./Assets/iPhone-Air-PNG.png" alt="iPhone Air" class="slider-img" decoding="async">
+                </div>
+                <div id="slider2" class="slider">
+                    <img src="./Assets/Apple-iPhone-17-Pro-PNG-1.png" alt="iPhone 17 Pro" class="slider-img" loading="lazy" decoding="async">
+                </div>
+                <div id="slider3" class="slider">
+                    <img src="./Assets/iphone-17-green.jpg" alt="iPhone 17 Green" class="slider-img" loading="lazy" decoding="async">
+                </div>
             </div>
         </div>
 
