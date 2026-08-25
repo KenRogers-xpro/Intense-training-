@@ -36,7 +36,8 @@
     </header>
     <section class="main">
         <div class="hero-image">
-            <img src="./Assets/hero__bdntboqignj6_xlarge.jpg" alt="Iphone 17 pro max">
+            <!-- ⚡ Performance: High priority for above-the-fold hero image to improve LCP -->
+            <img src="./Assets/hero__bdntboqignj6_xlarge.jpg" alt="Iphone 17 pro max" fetchpriority="high" decoding="async">
         </div>
 
     </section>
@@ -48,9 +49,16 @@
         </div>
         <div class="carousel">
             <div class="slider-container">
-                <div id="slider1" class="slider"></div>
-                <div id="slider2" class="slider"></div>
-                <div id="slider3" class="slider"></div>
+                <!-- ⚡ Performance: Converted CSS background-images to HTML img tags with lazy loading for off-screen slides to defer network fetching -->
+                <div id="slider1" class="slider">
+                    <img src="./Assets/iPhone-Air-PNG.png" alt="iPhone Air" decoding="async">
+                </div>
+                <div id="slider2" class="slider">
+                    <img src="./Assets/Apple-iPhone-17-Pro-PNG-1.png" alt="iPhone 17 Pro" loading="lazy" decoding="async">
+                </div>
+                <div id="slider3" class="slider">
+                    <img src="./Assets/iphone-17-green.jpg" alt="iPhone 17 Green" loading="lazy" decoding="async">
+                </div>
             </div>
         </div>
 
