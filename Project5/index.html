@@ -36,7 +36,8 @@
     </header>
     <section class="main">
         <div class="hero-image">
-            <img src="./Assets/hero__bdntboqignj6_xlarge.jpg" alt="Iphone 17 pro max">
+            <!-- Optimization: Added fetchpriority="high" and decoding="async" for LCP image -->
+            <img src="./Assets/hero__bdntboqignj6_xlarge.jpg" alt="Iphone 17 pro max" fetchpriority="high" decoding="async">
         </div>
 
     </section>
@@ -48,9 +49,18 @@
         </div>
         <div class="carousel">
             <div class="slider-container">
-                <div id="slider1" class="slider"></div>
-                <div id="slider2" class="slider"></div>
-                <div id="slider3" class="slider"></div>
+                <!-- Optimization: Converted CSS background-images to HTML <img> elements.
+                     First slide loads eagerly with fetchpriority="high"; subsequent off-screen carousel slides
+                     use loading="lazy" and decoding="async" to defer loading ~843KB of non-critical assets on initial page load. -->
+                <div id="slider1" class="slider">
+                    <img src="./Assets/iPhone-Air-PNG.png" alt="iPhone Air" fetchpriority="high" decoding="async">
+                </div>
+                <div id="slider2" class="slider">
+                    <img src="./Assets/Apple-iPhone-17-Pro-PNG-1.png" alt="iPhone 17 Pro" loading="lazy" decoding="async">
+                </div>
+                <div id="slider3" class="slider">
+                    <img src="./Assets/iphone-17-green.jpg" alt="iPhone 17 Green" loading="lazy" decoding="async">
+                </div>
             </div>
         </div>
 
