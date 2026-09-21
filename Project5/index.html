@@ -48,9 +48,16 @@
         </div>
         <div class="carousel">
             <div class="slider-container">
-                <div id="slider1" class="slider"></div>
-                <div id="slider2" class="slider"></div>
-                <div id="slider3" class="slider"></div>
+                <!-- Native img elements with loading="lazy" defer image decoding and loading for off-screen slides, improving initial page loading speed -->
+                <div id="slider1" class="slider">
+                    <img src="./Assets/iPhone-Air-PNG.png" alt="iPhone Air" fetchpriority="high">
+                </div>
+                <div id="slider2" class="slider">
+                    <img src="./Assets/Apple-iPhone-17-Pro-PNG-1.png" alt="iPhone 17 Pro" loading="lazy" decoding="async">
+                </div>
+                <div id="slider3" class="slider">
+                    <img src="./Assets/iphone-17-green.jpg" alt="iPhone 17 Green" loading="lazy" decoding="async">
+                </div>
             </div>
         </div>
 
