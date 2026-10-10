@@ -1,66 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Iphone 17 pro max</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Bolt Optimization: Prune unused font weights to reduce font request payload -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-</head>
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <div class="logo">
-            <img src="./Assets/apple_179309.png" alt="the apple logo">
-            <!-- <h3>Apple</h3> -->
-        </div>
-        <div class="links">
-            <a href="#">Store</a>
-            <!-- <a href="#">Mac</a> -->
-            <a href="#">iPad</a>
-            <a href="#">iPhone</a>
-            <a href="#">Watch</a>
-            <a href="#">AirPods</a>
-            <!-- <a href="#">TV & Home</a> -->
-            <!-- <a href="#">Entertainment</a> -->
-            <!-- <a href="#">Accessories</a> -->
-            <a href="#">Support</a>
-
-        </div>
-
+      <div class="logo">
+        <img src="./Assets/apple_179309.png" alt="the apple logo" />
+        <!-- <h3>Apple</h3> -->
+      </div>
+      <div class="links">
+        <a href="#">Store</a>
+        <!-- <a href="#">Mac</a> -->
+        <a href="#">iPad</a>
+        <a href="#">iPhone</a>
+        <a href="#">Watch</a>
+        <a href="#">AirPods</a>
+        <!-- <a href="#">TV & Home</a> -->
+        <!-- <a href="#">Entertainment</a> -->
+        <!-- <a href="#">Accessories</a> -->
+        <a href="#">Support</a>
+      </div>
     </header>
     <section class="main">
-        <div class="hero-image">
-            <img src="./Assets/hero__bdntboqignj6_xlarge.jpg" alt="Iphone 17 pro max">
-        </div>
-
+      <div class="hero-image">
+        <!-- Bolt Optimization: High priority fetch & async decoding for above-the-fold hero image (LCP element) -->
+        <img
+          src="./Assets/hero__bdntboqignj6_xlarge.jpg"
+          alt="Iphone 17 pro max"
+          fetchpriority="high"
+          decoding="async"
+        />
+      </div>
     </section>
     <section id="specs" class="specs">
-        <div class="intro">
-            <h1>
-                See the highlights.
-            </h1>
+      <div class="intro">
+        <h1>See the highlights.</h1>
+      </div>
+      <div class="carousel">
+        <div class="slider-container">
+          <!-- Bolt Optimization: Converted CSS background-images to HTML <img> tags.
+                     Off-screen slides use loading="lazy" and decoding="async" to defer ~840KB off critical initial page load. -->
+          <div id="slider1" class="slider">
+            <img
+              src="./Assets/iPhone-Air-PNG.png"
+              alt="iPhone Air"
+              decoding="async"
+            />
+          </div>
+          <div id="slider2" class="slider">
+            <img
+              src="./Assets/Apple-iPhone-17-Pro-PNG-1.png"
+              alt="iPhone 17 Pro"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div id="slider3" class="slider">
+            <img
+              src="./Assets/iphone-17-green.jpg"
+              alt="iPhone 17 Green"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
         </div>
-        <div class="carousel">
-            <div class="slider-container">
-                <div id="slider1" class="slider"></div>
-                <div id="slider2" class="slider"></div>
-                <div id="slider3" class="slider"></div>
-            </div>
-        </div>
+      </div>
 
-        <div class="navigations">
-            <button class="prev" id="prev"><</button>
-            <button class="next" id="next">></button>
-        </div>
-
+      <div class="navigations">
+        <button class="prev" id="prev"><</button>
+        <button class="next" id="next">></button>
+      </div>
     </section>
     <script src="scripts.js"></script>
-</body>
-
+  </body>
 </html>
