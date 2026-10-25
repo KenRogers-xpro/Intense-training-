@@ -1,174 +1,161 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'poppins', sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
 }
-body{
-    background: paleturquoise;
-    width: 100%;
-    height: 100vh;
-
+body {
+  background: paleturquoise;
+  width: 100%;
+  height: 100vh;
 }
-.header{
-    background: none;
-    width: 100%;
-    height: 130px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    backdrop-filter: blur(10px);
-    position: fixed;
+.header {
+  background: none;
+  width: 100%;
+  height: 130px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  position: fixed;
 }
-.header-scroll{
-    backdrop-filter: blur(10px);
+.header-scroll {
+  backdrop-filter: blur(10px);
 }
-.header img{
-    width: 100px;
-    height: 80px;
-    margin: 10px 20px;
-    color: #ffff;
+.header img {
+  width: 100px;
+  height: 80px;
+  margin: 10px 20px;
+  color: #ffff;
 }
-.header .logo{
-    /* background: tomato; */
-    width: 300px;
-    height: 130px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.header .logo {
+  /* background: tomato; */
+  width: 300px;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.header .logo h3{
-    font-size: 35px;
-    color: #ffff;
-
+.header .logo h3 {
+  font-size: 35px;
+  color: #ffff;
 }
-.header .links{
-    /* background: palegreen; */
-    width: 50%;
-    height: 130px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    text-decoration: none;
+.header .links {
+  /* background: palegreen; */
+  width: 50%;
+  height: 130px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-decoration: none;
 }
-.header .links a{
-    text-decoration: none;
-    color: #ffff;
-    font-size: 20px;
-
+.header .links a {
+  text-decoration: none;
+  color: #ffff;
+  font-size: 20px;
 }
-.header .links a:hover{
-    color: tomato;
-    border-bottom: 2px solid tomato;
-    transition: 0.5s;
+.header .links a:hover {
+  color: tomato;
+  border-bottom: 2px solid tomato;
+  transition: 0.5s;
 }
-.main{
-    width: 100%;
-    background: rgb(0, 0, 0);
-    
+.main {
+  width: 100%;
+  background: rgb(0, 0, 0);
 }
-.main .hero-image{
-    width: 100%;
-    
-
+.main .hero-image {
+  width: 100%;
 }
-.main .hero-image img{
-    width: 100%;
-    margin-top: 200px;
+.main .hero-image img {
+  width: 100%;
+  margin-top: 200px;
 }
 /* These are the phone highlights */
 
-.specs{
-    width: 100%;
-    height: 100vh;
-    background: rgb(0, 0, 0);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* border-radius: 20px; */
+.specs {
+  width: 100%;
+  height: 100vh;
+  background: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border-radius: 20px; */
 }
-.specs .intro{
-    width: 100%;
-    height: 150px;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    color: #ffff;
+.specs .intro {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  color: #ffff;
 }
-.specs .intro h1{
-    font-size: 60px;
+.specs .intro h1 {
+  font-size: 60px;
 }
-.slider-container{
-    width: 100%;
-    max-width: 60vw;
-    height: 70vh;
-    /* background-color: rgb(243, 141, 7); */
-    display: flex;
-    /* flex-direction: row; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    position: relative;
-    /* overflow: hidden; */
-    transition: 0.5s;
+.slider-container {
+  width: 100%;
+  max-width: 60vw;
+  height: 70vh;
+  /* background-color: rgb(243, 141, 7); */
+  display: flex;
+  /* flex-direction: row; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  position: relative;
+  /* overflow: hidden; */
+  transition: 0.5s;
 }
-.slider{
-    min-width: 100%;
-    height: 100%;
-    /* background: palegreen; */
-    border-radius: 100px;
-}
-
-#slider1{
-    background: url(./Assets/iPhone-Air-PNG.png) no-repeat center center/cover;
-}
-#slider2{
-    background: url(./Assets/Apple-iPhone-17-Pro-PNG-1.png) no-repeat center center/cover;
-}
-#slider3{
-    background: url(./Assets/iphone-17-green.jpg) no-repeat center center/cover;
+.slider {
+  min-width: 100%;
+  height: 100%;
+  /* background: palegreen; */
+  border-radius: 100px;
+  overflow: hidden;
 }
 
-.navigations{
-    /* background: silver; */
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    position: absolute;
-    gap: 50%;
+/* Style for img elements inside slides replacing CSS background-images */
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100px;
 }
-.navigations button{
-    width: 80px;
-    height: 90%;
-    border: 1px solid rgb(255, 255, 255);
-    background: none;
-    font-size: 30px;
-    cursor: pointer;
-    border-radius: 50px;
-    transition: 0.5s;
-    color: #ffff;
-    font-weight: bold;
 
-    
-
+.navigations {
+  /* background: silver; */
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  gap: 50%;
 }
-.navigations button:hover{
-    background-color: rgb(255, 115, 0);
-    color: #ffff;
+.navigations button {
+  width: 80px;
+  height: 90%;
+  border: 1px solid rgb(255, 255, 255);
+  background: none;
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #ffff;
+  font-weight: bold;
+}
+.navigations button:hover {
+  background-color: rgb(255, 115, 0);
+  color: #ffff;
 }
 
 .carousel {
-    width: 80%;
-    max-width: 60vw;
-    height: 70vh;
-    /* border: 2px solid green; */
-    display: flex;
-    
-    /* position: relative; */
-    overflow: hidden;
+  width: 80%;
+  max-width: 60vw;
+  height: 70vh;
+  /* border: 2px solid green; */
+  display: flex;
+
+  /* position: relative; */
+  overflow: hidden;
 }
-
-
-
