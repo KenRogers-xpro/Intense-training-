@@ -1,26 +1,36 @@
 
 let slides = document.querySelector(".slider-container");
-let slide = document.querySelectorAll(".slider")
+let slide = document.querySelectorAll(".slider");
 
-let nextBtn = document.getElementById("next")
-let prevBtn = document.getElementById("prev")
+let nextBtn = document.getElementById("next");
+let prevBtn = document.getElementById("prev");
 
 let counter = 0;
 
 let slideCount = slide.length;
 
-nextBtn.addEventListener ("click", function (){
+// Performance optimization: Lazy load slide background image on demand
+// Prevents downloading ~863 KB of offscreen slide images during initial page load
+function loadSlideImage(index) {
+    let targetSlide = slide[index];
+    if (targetSlide && targetSlide.dataset.bg) {
+        targetSlide.style.backgroundImage = `url('${targetSlide.dataset.bg}')`;
+        delete targetSlide.dataset.bg;
+    }
+}
 
-    counter ++;
+nextBtn.addEventListener("click", function () {
+    counter++;
 
     if (counter >= slideCount) counter = 0;
-    slides.style.transform = `translateX(-${counter * 100}%)`
+    loadSlideImage(counter);
+    slides.style.transform = `translateX(-${counter * 100}%)`;
+});
 
-})
 prevBtn.onclick = function () {
-    counter --;
+    counter--;
     if (counter < 0) counter = slideCount - 1;
-    slides.style.transform = `translateX(-${counter * 100}%)`
-
-}
+    loadSlideImage(counter);
+    slides.style.transform = `translateX(-${counter * 100}%)`;
+};
 // console.log("hello world");
