@@ -122,11 +122,11 @@ body{
 #slider1{
     background: url(./Assets/iPhone-Air-PNG.png) no-repeat center center/cover;
 }
-#slider2{
-    background: url(./Assets/Apple-iPhone-17-Pro-PNG-1.png) no-repeat center center/cover;
-}
-#slider3{
-    background: url(./Assets/iphone-17-green.jpg) no-repeat center center/cover;
+/* Offscreen slider backgrounds are deferred and loaded on demand */
+#slider2, #slider3 {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 
 .navigations{

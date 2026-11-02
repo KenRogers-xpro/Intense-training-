@@ -48,9 +48,11 @@
         </div>
         <div class="carousel">
             <div class="slider-container">
+                <!-- Slide 1 is immediately visible when scrolled to, loaded eagerly -->
                 <div id="slider1" class="slider"></div>
-                <div id="slider2" class="slider"></div>
-                <div id="slider3" class="slider"></div>
+                <!-- Offscreen slides 2 & 3: lazy loaded via data-bg when navigated to -->
+                <div id="slider2" class="slider" data-bg="./Assets/Apple-iPhone-17-Pro-PNG-1.png"></div>
+                <div id="slider3" class="slider" data-bg="./Assets/iphone-17-green.jpg"></div>
             </div>
         </div>
 
