@@ -20,9 +20,6 @@ body{
     backdrop-filter: blur(10px);
     position: fixed;
 }
-.header-scroll{
-    backdrop-filter: blur(10px);
-}
 .header img{
     width: 100px;
     height: 80px;
@@ -110,7 +107,9 @@ body{
     /* align-items: center; */
     position: relative;
     /* overflow: hidden; */
-    transition: 0.5s;
+    /* Performance: Specific transform transition and GPU layer promotion for smooth 60fps sliding */
+    will-change: transform;
+    transition: transform 0.5s ease;
 }
 .slider{
     min-width: 100%;
